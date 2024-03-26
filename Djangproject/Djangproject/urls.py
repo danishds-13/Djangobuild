@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about-us/',views.aboutUS),
     path('coursedetails/<slug:course>',views.coursedetails),
+    path('',views.homePage),
 ]
