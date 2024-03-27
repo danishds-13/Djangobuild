@@ -2,7 +2,12 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def homePage(request):
-    return render(request,"index.html")
+    data={
+        'title':'Home Page',
+        'bdata':'welcome to this new learning path',
+        'numbers':[10,20,15,30]
+    }
+    return render(request,"index.html",data)
 
 def aboutUS(request):
     return HttpResponse("welcome to Example page")
