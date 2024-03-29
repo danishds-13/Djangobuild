@@ -5,7 +5,7 @@ def homePage(request):
     data={
         'title':'Home Page',
         'bdata':'welcome to this new learning path',
-        'numbers':[10,20,15,30]
+        'numbers':[10,20,15,30,20]
     }
     return render(request,"index.html",data)
 
