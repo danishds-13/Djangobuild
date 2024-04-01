@@ -12,5 +12,8 @@ def homePage(request):
 def aboutUS(request):
     return HttpResponse("welcome to Example page")
 
+def services(request):
+    return render(request,"services.html")
+
 def coursedetails(request,course):
     return HttpResponse(course)

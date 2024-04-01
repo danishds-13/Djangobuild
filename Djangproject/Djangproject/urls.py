@@ -21,6 +21,7 @@ from Djangproject import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about-us/',views.aboutUS),
+    path('services/',views.services),
     path('coursedetails/<slug:course>',views.coursedetails),
     path('',views.homePage),
 ]
