@@ -14,10 +14,11 @@
         <h1>Welcome to Our Website</h1>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>    <!-- we are using this "/" to specify it as a home directory-->
-                <li><a href="{% url 'home' %}">About</a></li>
+               {{request.path}}   <!-- kaunsa page pe ho ap -->
+                <li class="{% if request.path =='/' %} active {% endif %}"><a href="{% url 'home' %}">Home</a></li>    <!-- we are using this "/" to specify it as a home directory-->
+                <li><a href="{% if request.path =='aboutus' %} active {% endif %}"><a href="{% url 'aboutus' %}">About</a></li>
                 <li><a href="/services.html">Services</a></li>
-                <li><a href="/contactus">Contact</a></li>
+                <li><a href="{% if request.path =='Contact' %} active {% endif %}"><a href="{% url 'Contact' %}">Contact</a></li>
             </ul>
         </nav>
     </header>
