@@ -17,3 +17,15 @@ def services(request):
 
 def coursedetails(request,course):
     return HttpResponse(course)
+
+def userForm(request):
+    finalans=0
+    try:
+        n1=request.GET['username']
+        n2=request.GET['email']
+        n3=request.GET['password']
+        n4=request.GET['bio']
+        print(n1+n2;)
+    except:
+        pass
+    return render("userform.html",{'output':finalans})

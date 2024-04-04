@@ -24,4 +24,5 @@ urlpatterns = [
     path('',views.homepage,name='home'),
     path('services/',views.services,name='services'),
     path('coursedetails/<slug:course>',views.coursedetails),
+    path('userform',views.userForm),
 ]
