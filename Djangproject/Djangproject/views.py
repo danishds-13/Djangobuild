@@ -29,3 +29,22 @@ def userForm(request):
     except:
         pass
     return render("userform.html",{'output':finalans})
+
+# use of post command :-
+#def userForm(request):
+#    finalans=0
+#    try:
+#       if request.method=="POST"
+#        n1=request.POST['username']
+#        n2=request.POST['email']
+#        n3=request.POST['password']
+#        n4=request.POST['bio']
+#       finalans=n1+n2
+#        data={
+#                'n1':n1,
+#                'n2':n2,
+#                'output':finalans
+#}
+#    except:
+#        pass
+#    return render("userform.html",data)
