@@ -9,6 +9,18 @@ def homePage(request):
     }
     return render(request,"index.html",data)
 
+def submitform(request):                             #used for submit form must restart the server
+    try:
+        n1=request.GET['username']
+        n2=request.GET['email']
+        n3=request.GET['password']
+        n4=request.GET['bio']
+        print(n1+n2;)
+
+        return redirect(url)
+    except:
+        pass
+
 def aboutUS(request):
     if request.methods=="GET":
         output=request.GET.get('output')

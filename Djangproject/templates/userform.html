@@ -3,7 +3,7 @@
 
 <body>
     <h2>User Registration Form</h2>
-    <form action="#" method="post">
+    <form action="#" method="post" action="{% url 'submitform' %}">         <!-- we are using action here this can be used for any language -->
         {% carf_token %}
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
