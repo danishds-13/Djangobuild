@@ -1,5 +1,6 @@
 from django.http import HttpResponse 
 from django.shortcuts import render   #there is one method in django called redirect 
+from .forms import UserForm            # this is used to call the forms page 
 
 def homePage(request):
     data={
@@ -34,12 +35,19 @@ def coursedetails(request,course):
 
 def userForm(request):
     finalans=0
+    fn=UserForm()
+
+    data={'form':fn}            # representation of use of dictionary 
     try:
-        n1=request.GET['username']
-        n2=request.GET['email']
-        n3=request.GET['password']
-        n4=request.GET['bio']
-        print(n1+n2;)
+        if request.method=="POST":
+            n1=int(request.POST.get('num1'))
+            n2=int(request.POST.get('num2'))
+            finalans=n1+n2
+            data={
+                'form':fn,
+                'output':finalans
+            }
+            url="/about-us/?output={}".format(finalans)
     except:
         pass
     return render("userform.html",{'output':finalans})
