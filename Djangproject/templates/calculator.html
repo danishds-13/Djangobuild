@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body> 
+    <h2>User Registration Form</h2>
+    <form action="#" method="post" action="{% url 'calculator' %}"> 
+       <div>
+            <h1 class="mb-10">calculator</h1>
+       </div>
+
+       <div class="row">
+            <div class="col-2">
+                <form method="post">
+                    <label> Value 1</label>
+                    <input type="text" name="num1" class="form-control"/>
+                    <select>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                    <label> Value 2</label>
+                    <input type="text" name="num2" class="form-control"/>
+
+                    <button type="submit"> calculator </button><br>
+                </form>
+            </div>
+        </div>
+    </form>
+</body>
+
+{% endblock %}

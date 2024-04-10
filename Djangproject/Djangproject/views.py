@@ -30,6 +30,9 @@ def aboutUS(request):
 def services(request):
     return render(request,"services.html")
 
+def calculator(request):
+    return render(request,"services.html")
+
 def coursedetails(request,course):
     return HttpResponse(course)
 
