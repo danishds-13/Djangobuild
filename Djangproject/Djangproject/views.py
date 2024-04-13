@@ -31,7 +31,25 @@ def services(request):
     return render(request,"services.html")
 
 def calculator(request):
-    return render(request,"services.html")
+    try:
+        c=''
+        if request.method=="POST":
+            n1=eval(request.POST.get('num1'))
+            n2=eval(request.POST.get('num2'))
+            opr=request.POST.get('num3')
+            if opr=="+":
+                c=n1+n2
+            elif opr="-":
+                c=n1-n2
+            elif opr=="*":
+                c=n1*n2
+            elif opr=="/":
+                c==n1/n2    
+    
+    except:
+        c="invalid operation"
+    
+    return render(request,"calculator.html",'{'c':c})
 
 def coursedetails(request,course):
     return HttpResponse(course)
