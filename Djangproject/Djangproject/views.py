@@ -30,6 +30,9 @@ def aboutUS(request):
 def services(request):
     return render(request,"services.html")
 
+def saveoddoreven(request):
+    return render(request,"oddoreven.html",{'c':10})
+
 def calculator(request):
     try:
         c=''

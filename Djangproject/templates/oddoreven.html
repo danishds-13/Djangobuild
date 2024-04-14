@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body> 
+    <h2>User Registration Form</h2>
+    <form action="#" method="post" action="{% url 'calculator' %}"> 
+       <div>
+            <h1 class="mb-10">calculator</h1>
+       </div>
+
+       <div class="row">
+            <div class="col-2">
+                <form method="post">
+                    {% csrf_token %}
+                    <label> value1 </label>
+                    <input type="text" name="num1" class="form-control"/>
+
+                    <button type="submit"> Even | odd </button><br>
+                    <label> output </label>
+                    <input type="text" value="{{c}}" class="form-control"/>
+                </form>
+            </div>
+        </div>
+    </form>
+</body>
+
+{% endblock %}

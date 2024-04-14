@@ -23,7 +23,9 @@ urlpatterns = [
     path('about-us/',views.aboutUS,name='about'),
     path('',views.homepage,name='home'),
     path('services/',views.services,name='services'),
+    path('calculator/',views.calculator,name='calculator'),
     path('submitform/',views.submitform,name='submitform')
     path('coursedetails/<slug:course>',views.coursedetails),
     path('userform',views.userForm),
+    path('saveoddoreven',views.saveoddoreven),
 ]
