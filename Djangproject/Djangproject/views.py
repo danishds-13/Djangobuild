@@ -31,6 +31,13 @@ def services(request):
     return render(request,"services.html")
 
 def saveoddoreven(request):
+    c=''
+    if request.method=="POST":
+        n=eval(request.POST.get('num1'))
+        if n%2==0:
+            c="Even number"
+        else:
+            c="odd numbrt"
     return render(request,"oddoreven.html",{'c':10})
 
 def calculator(request):
