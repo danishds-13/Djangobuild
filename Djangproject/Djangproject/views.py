@@ -30,6 +30,20 @@ def aboutUS(request):
 def services(request):
     return render(request,"services.html")
 
+def marksheet(request):
+    if request.method=="POST"
+        s1=eval(request.POST.get('subject1'))
+        s2=eval(request.POST.get('subject2'))
+        s3=eval(request.POST.get('subject3'))
+        t=s1+s2+s3
+        p=t*100/3;
+        data={
+            'total'=t,
+            'per'=p
+        }
+        return render(request,"marksheet.html",data)
+    return render(request,"marksheet.html")
+
 def saveoddoreven(request):
     c=''
     if request.method=="POST":

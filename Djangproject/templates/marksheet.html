@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marksheet</title>
+</head>
+<body>
+
+<section id="marksheet" class="container">
+    <h1 class="heading">Student Marksheet</h1>
+    <form class="mark-form" method="post">
+        <div class="form-group">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="subject1">Subject 1:</label>
+            <input type="number" id="subject1" name="subject1" required>
+        </div>
+        <div class="form-group">
+            <label for="subject2">Subject 2:</label>
+            <input type="number" id="subject2" name="subject2" required>
+        </div>
+        <div class="form-group">
+            <label for="subject3">Subject 3:</label>
+            <input type="number" id="subject3" name="subject3" required>
+        </div>
+        <div class="form-group">
+            <label for="subject4">Subject 4:</label>
+            <input type="number" id="subject4" name="subject4" required>
+        </div>
+        <div class="form-group">
+            <label for="subject5">Subject 5:</label>
+            <input type="number" id="subject5" name="subject5" required>
+        </div>
+        <div class="form-group">
+            <label for="percentage">Percentage:</label>
+            <input type="number" id="percentage" name="percentage" readonly value="{{per}}">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Calculate Percentage" value={{total}}>
+        </div>
+        <button type="submit">Marksheet </button><br>
+    </form>
+</section>
+
+</body>
+</html>
