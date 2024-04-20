@@ -37,9 +37,18 @@ def marksheet(request):
         s3=eval(request.POST.get('subject3'))
         t=s1+s2+s3
         p=t*100/3;
+        if p>60:
+            d="first dev"
+        elif p>=48:
+            d="second dev"
+        elif p>=38:
+            d="third dev"
+        else:
+            d="fail"
         data={
             'total'=t,
-            'per'=p
+            'per'=p,
+            'div'=d
         }
         return render(request,"marksheet.html",data)
     return render(request,"marksheet.html")
