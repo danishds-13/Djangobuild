@@ -56,6 +56,11 @@ def marksheet(request):
 def saveoddoreven(request):
     c=''
     if request.method=="POST":
+        #this is for the manual form 
+        if request.POST.get('num1')=="":
+            return render(request,"oddoreven.html",{'error':True})
+            
+        # this is for odd or even 
         n=eval(request.POST.get('num1'))
         if n%2==0:
             c="Even number"

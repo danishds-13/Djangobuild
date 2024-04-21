@@ -21,6 +21,12 @@
                 </form>
             </div>
         </div>
+        <!-- this is for the manual form validation -->
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            This is a primary alert—check it out!
+        </div>
+        {% endif %}
     </form>
 </body>
 
