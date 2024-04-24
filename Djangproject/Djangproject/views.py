@@ -1,8 +1,14 @@
 from django.http import HttpResponse 
 from django.shortcuts import render   #there is one method in django called redirect 
 from .forms import UserForm            # this is used to call the forms page 
+from .service.models import Service         #in your models object call them that is the  django.admins 
 
 def homePage(request):
+    servicesData=Services.objects.all()             #used to call more than 1 objects
+    data={
+        'servicesData':servicesData
+    }
+
     data={
         'title':'Home Page',
         'bdata':'welcome to this new learning path',
