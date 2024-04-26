@@ -4,7 +4,7 @@ from .forms import UserForm            # this is used to call the forms page
 from .service.models import Service         #in your models object call them that is the  django.admins 
 
 def homePage(request):
-    servicesData=Services.objects.all()             #used to call more than 1 objects
+    servicesData=Services.objects.all().order_by('service_title')           #used to call more than 1 objects and the order_by function is used to give more than one order 
     data={
         'servicesData':servicesData
     }
