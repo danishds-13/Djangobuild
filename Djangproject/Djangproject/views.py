@@ -4,7 +4,7 @@ from .forms import UserForm            # this is used to call the forms page
 from .service.models import Service         #in your models object call them that is the  django.admins 
 
 def homePage(request):
-    servicesData=Services.objects.all().order_by('service_title')           #used to call more than 1 objects and the order_by function is used to give more than one order 
+    servicesData=Services.objects.all().order_by('-service_title')[:3]           #used to call more than 1 objects and the order_by function is used to give more than one order and in the end we have mentioned the limit that is with the help of the slicing method so there we can see the mention of [:3] this means from 0 to 3 we have to display out of 6
     data={
         'servicesData':servicesData
     }
