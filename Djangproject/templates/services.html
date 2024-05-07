@@ -18,6 +18,18 @@
             <p>Boost your online visibility and attract more organic traffic with our SEO strategies.</p>
         </div>
         <!-- Add more services here -->
+        {% if feature_available %}
+            <div class="col-lg-4 col-md-6">
+                <div cclass="title d-flex flex-row pb-20">
+                    <span class="{{n.service_icon}}"></span>
+                    <h2>{{ feature_title }}</h2>
+                    <p>{{ feature_description }}</p>
+            </div>
+        <p>
+            {{n.service_des | upper | safe  }}      <!-- cant use lower and first and upper altogether at once and if slice="0:3" -->
+        </p>
+        {% endif %}
+
     </div>
 </body>
 {% endblock %}
