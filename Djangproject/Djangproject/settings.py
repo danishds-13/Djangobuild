@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'service',
+    'tinymce',                  #this should installed to use that is the pip install tinymce
+    'news',                     # since we are calling the tinymce
 ]
 
 MIDDLEWARE = [
