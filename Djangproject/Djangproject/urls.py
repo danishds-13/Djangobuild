@@ -28,5 +28,6 @@ urlpatterns = [
     path('coursedetails/<slug:course>',views.coursedetails),
     path('userform',views.userForm),
     path('saveoddoreven',views.saveoddoreven),
-    path('marksheet',views.marksheet)
+    path('marksheet',views.marksheet),
+    path('newsDetails/<newsid>',views.newsDetails),
 ]
