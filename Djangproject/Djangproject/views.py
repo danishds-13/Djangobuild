@@ -41,7 +41,15 @@ def aboutUS(request):
     return render(request,"about-is.html",{'output':output})   
 
 def services(request):
-    return render(request,"services.html")
+    ServiceData=Service.objects.all()
+    if request.method=="GET":
+        st=requst.Get.get('servicename')
+        if st!=None:
+          ServiceData=Service.objects.filter(service_title__icontains=st) 
+    data={
+        'serviceData':ServiceData
+    }
+    return render(request,"services.html",data)
 
 def marksheet(request):
     if request.method=="POST"
