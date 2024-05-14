@@ -5,7 +5,7 @@
 
 <marquee onmouseover="stop()" onmouseout="start()">
     {% for news in newsData %}
-    Welcome to the page
+    <a href="/newsDetails/{{news.news_slug}}"> {{news.news_title}} </a>
     {% endfor %}
 </marquee>
 

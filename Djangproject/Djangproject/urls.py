@@ -29,5 +29,5 @@ urlpatterns = [
     path('userform',views.userForm),
     path('saveoddoreven',views.saveoddoreven),
     path('marksheet',views.marksheet),
-    path('newsDetails/<newsid>',views.newsDetails),
+    path('newsDetails/<slug>',views.newsDetails),
 ]

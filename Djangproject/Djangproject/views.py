@@ -19,8 +19,8 @@ def homePage(request):
     }
     return render(request,"index.html",data)
 
-def newsDetails(request,newsid):
-    newsDetails=News.Object.get(id=newsid)
+def newsDetails(request,slug):
+    newsDetails=News.Object.get(news_slug=slug)
     return render(request,"newsDetails.html")
 
 def submitform(request):                             #used for submit form must restart the server
