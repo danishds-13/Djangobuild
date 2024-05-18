@@ -3,6 +3,7 @@ from django.shortcuts import render   #there is one method in django called redi
 from .forms import UserForm            # this is used to call the forms page 
 from .service.models import Service         #in your models object call them that is the  django.admins 
 from news.model import News                 # import the news module for the marquees
+from django.core.paginator import Paginator     #paginator
 
 def homePage(request):
     newsData=News.objects.all();
@@ -42,6 +43,9 @@ def aboutUS(request):
 
 def services(request):
     ServiceData=Service.objects.all()
+    paginator=Paginator(ServiceData,2)    #paginator
+    page_number=request.Get.get('page')
+    ServiceDatafinal=paginator.get_page(page_number)
     if request.method=="GET":
         st=requst.Get.get('servicename')
         if st!=None:
