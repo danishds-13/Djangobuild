@@ -46,6 +46,7 @@ def services(request):
     paginator=Paginator(ServiceData,2)    #paginator
     page_number=request.Get.get('page')
     ServiceDatafinal=paginator.get_page(page_number)
+    totalpage=ServiceDatafinal.paginator.num_pages
     if request.method=="GET":
         st=requst.Get.get('servicename')
         if st!=None:
