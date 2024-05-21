@@ -30,4 +30,5 @@ urlpatterns = [
     path('saveoddoreven',views.saveoddoreven),
     path('marksheet',views.marksheet),
     path('newsDetails/<slug>',views.newsDetails),
+    path('saveenquiry/',views.saveEnquiry,name="saveenquiry"),
 ]
