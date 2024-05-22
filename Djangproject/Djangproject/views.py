@@ -4,6 +4,7 @@ from .forms import UserForm            # this is used to call the forms page
 from .service.models import Service         #in your models object call them that is the  django.admins 
 from news.model import News                 # import the news module for the marquees
 from django.core.paginator import Paginator     #paginator
+from contactenquiry.models import contenEnquiry
 
 def homePage(request):
     newsData=News.objects.all();
@@ -24,7 +25,18 @@ def newsDetails(request,slug):
     newsDetails=News.Object.get(news_slug=slug)
     return render(request,"newsDetails.html")
 
-def contact(request):
+def contact(request):     #used this for the database which can be done from django as well 
+    return render(request,"contact.html")
+
+def saveEnquiry(request):    # the save form data to database 
+    if request.method=="POST":
+        name=request.POST.get("name")
+        email=request.POST.get("email")
+        phone=request.POST.get("phone")
+        tel=request.POST.get("tel")
+        en=contactEnquiry(name=name,email=email,phone=phone,tel=tel)
+        en.save()   # this is the function to save 
+    return render(request,"saveEnquiry")
 
 def submitform(request):                             #used for submit form must restart the server
     try:
