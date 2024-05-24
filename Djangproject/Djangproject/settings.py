@@ -132,3 +132,9 @@ STATICFILES_DIRS =[
 MEDIA_ROOT=BASE_DIR /"media"
 
 MEDIA_URL="/media/"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'your@djangoapp.com'
+EMAIL_HOST_PASSWORD = 'your password'
+EMAIL_USE_TLS = False
